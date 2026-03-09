@@ -5,6 +5,7 @@ import com.example.zomato.data.api.OrderApi
 import com.example.zomato.data.api.UserApi
 import com.example.zomato.data.api.CartApi
 import com.example.zomato.data.api.AuthApi
+import com.example.zomato.data.api.MenuApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -68,4 +69,10 @@ object NetworkModule {
     fun provideAuthApi(retrofit: Retrofit): AuthApi {
         return retrofit.create(AuthApi::class.java)
     }
-} 
+
+    @Provides
+    @Singleton
+    fun provideMenuApi(retrofit: Retrofit): MenuApi {
+        return retrofit.create(MenuApi::class.java)
+    }
+}
