@@ -1,0 +1,12 @@
+/.gradle/
+/.idea/
+/.kotlin/
+/local.properties
+/build/
+/.vscode/
+/app/customer/build/
+/app/delivery/build/
+/app/restaurant/build/
+/core/build/
+/data/build/
+/domain/build/

@@ -1,0 +1,31 @@
+package com.example.zomato.customer
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.ui.Modifier
+import androidx.navigation.compose.rememberNavController
+import com.example.zomato.customer.navigation.CustomerNavGraph
+import com.example.zomato.customer.ui.theme.ZomatoCustomerTheme
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class CustomerActivity : ComponentActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent {
+            ZomatoCustomerTheme {
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    val navController = rememberNavController()
+                    CustomerNavGraph(navController = navController)
+                }
+            }
+        }
+    }
+} 

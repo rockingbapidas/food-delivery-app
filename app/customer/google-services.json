@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "790021945422",
+    "project_id": "zomato-sample",
+    "storage_bucket": "zomato-sample.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:790021945422:android:d354083afabdd1f44a2b1f",
+        "android_client_info": {
+          "package_name": "com.example.zomato.customer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6wbNKlIj7Y0J8DJFy3pw-msn3Jx25edk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
