@@ -62,7 +62,7 @@ class OrderRepositoryImpl @Inject constructor(
         }
     }
 
-    override suspend fun rateOrder(orderId: String, rating: Int, feedback: String?): Result<Unit> = runCatching {
-        api.rateOrder(orderId, rating, feedback)
+    override suspend fun rateOrder(orderId: String, rating: Double, feedback: String?): Result<Unit> = runCatching {
+        api.rateOrder(orderId, rating.toInt(), feedback)
     }
-} 
+}

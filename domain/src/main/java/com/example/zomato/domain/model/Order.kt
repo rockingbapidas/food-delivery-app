@@ -6,15 +6,18 @@ data class Order(
     val restaurantName: String,
     val items: List<OrderItem>,
     val totalAmount: Double,
+    val deliveryFee: Double = 0.0,
     val status: OrderStatus,
     val orderTime: Long,
     val estimatedDeliveryTime: Long,
+    val deliveryDate: String? = null,
     val deliveryAddress: String,
     val customerName: String,
     val customerPhone: String,
     val specialInstructions: String?,
     val paymentMethod: PaymentMethod,
-    val deliveryPerson: DeliveryPerson
+    val deliveryPerson: DeliveryPerson,
+    val rating: Double? = null
 )
 
 data class OrderItem(

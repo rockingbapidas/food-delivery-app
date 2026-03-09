@@ -13,5 +13,5 @@ interface OrderRepository {
     suspend fun cancelOrder(orderId: String): Result<Unit>
     suspend fun updateOrderStatus(orderId: String, status: OrderStatus): Result<Unit>
     suspend fun trackOrder(orderId: String): Flow<Order>
-    suspend fun rateOrder(orderId: String, rating: Int, feedback: String?): Result<Unit>
+    suspend fun rateOrder(orderId: String, rating: Double, feedback: String?): Result<Unit>
 }
